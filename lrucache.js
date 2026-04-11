@@ -44,11 +44,10 @@ class LRU{
         if (this.map.has(key)){
             const node = this.map.get(key)
             node.value = value
-            this.map.set(key, node)
             this.list.removeNode(node)
             this.list.addToFront(node)
         }else{
-            
+
             if(this.map.size === this.capacity){
             const lru = this.list.tail.prev
             this.list.removeNode(lru)
