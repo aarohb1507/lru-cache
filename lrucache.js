@@ -52,7 +52,7 @@ class LRU{
             const lru = this.list.tail.prev
             this.list.removeNode(lru)
             this.map.delete(lru.key)
-        }
+         }
 
             const node = new Node(key, value)
             this.map.set(key,node)
